@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import api from '../axiosAuth';
+import api from '../axiosWithAuth';
 
 const Login = (props) => {
   // make a post request to retrieve a token from the api

@@ -29,7 +29,7 @@ const ColorList = ({ colors, updateColors }) => {
       })
       .catch(err => {
         throw err
-      });
+      }); 
     window.location.reload(false);
   };
 

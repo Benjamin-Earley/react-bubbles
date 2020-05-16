@@ -20,7 +20,8 @@ const Login = (props) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    api().post('/api/login', data)
+    api()
+      .post('/api/login', data)
       .then(res => {
         localStorage.setItem('token', res.data.payload);
         props.history.push('/bubbles');

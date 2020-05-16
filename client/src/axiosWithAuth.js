@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 export function getToken() {
+    console.log(`Token: ${localStorage.getItem('token')}`)
     return localStorage.getItem('token');
 };
 export default function() {

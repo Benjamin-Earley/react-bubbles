@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
+import { getToken } from './axiosWithAuth';
+import PrivateRoute from './PrivateRoute';
 import Login from "./components/Login";
 import "./styles.scss";
+import BubblePage from './components/BubblePage';
 
 function App() {
+  const signedIn = getToken();
   return (
     <Router>
       <div className="App">
@@ -13,6 +17,7 @@ function App() {
           Build a PrivateRoute component that will 
           display BubblePage when you're authenticated 
         */}
+        <PrivateRoute exact path='/bubbles' component={BubblePage} />
       </div>
     </Router>
   );
